@@ -12,22 +12,24 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: .  # index.html must be here
+          path: .   # index.html must be in the root folder
 
   deploy:
-    runs-on: ubuntu-latest
     needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
