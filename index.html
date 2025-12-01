@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeOps — Home</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg: #ffffff;
+            --card: #f8fafc;
+            --radius: 14px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text-dark);
+        }
+
+        nav {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bg);
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        nav .logo {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .hero {
+            padding: 60px 40px;
+            text-align: center;
+            max-width: 980px;
+            margin: auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            margin-top: 14px;
+            font-size: 18px;
+            color: var(--text-light);
+        }
+
+        .banner {
+            margin: 30px auto;
+            padding: 16px 22px;
+            background: var(--primary);
+            color: white;
+            max-width: 600px;
+            border-radius: var(--radius);
+            font-size: 18px;
+            font-weight: 600;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .sections {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            padding: 0 40px;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        .card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 15px;
+            color: var(--text-light);
+        }
+
+        footer {
+            margin-top: 60px;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">CodeOps</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Auto Deploy Discount Banner -->
+    <div id="discountBanner" class="banner">
+        🎉 Special Discount: Get 30% OFF on all DevOps Courses! (Auto deploy test)
+    </div>
+
+    <section class="hero">
+        <h1>Learn DevOps & Cloud the Right Way</h1>
+        <p>Hands‑on training, real‑world projects, expert‑led lessons — built for modern engineers.</p>
+    </section>
+
+    <section class="sections">
+        <div class="card">
+            <h3>DevOps Mastery</h3>
+            <p>CI/CD, Docker, Kubernetes, GitHub Actions, AWS, Linux Automation.</p>
+        </div>
+        <div class="card">
+            <h3>Cloud Engineering</h3>
+            <p>Master AWS, Azure, Terraform, monitoring, cloud infra.</p>
+        </div>
+        <div class="card">
+            <h3>Live Support</h3>
+            <p>1-on-1 mentorship, live problem solving, mock interviews.</p>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 CodeOps · All Rights Reserved
+    </footer>
+
+</body>
+</html>
